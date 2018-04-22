@@ -45,12 +45,10 @@ class SetupViewController: UIViewController {
         if id != "battle" { return }
 
         guard let realBattle = battle,
-            let battleVC = storyboard?.instantiateViewController(withIdentifier: "BattleViewController") as? BattleViewController
-            else { fatalError("BattleViewController not found in storyboard") }
+            let battleVC = segue.destination as? BattleViewController
+            else { return }
 
         battleVC.battle = realBattle
-
-        navigationController?.present(battleVC, animated: true)
     }
 
     @IBAction func validateInput(sender: UIButton) {
