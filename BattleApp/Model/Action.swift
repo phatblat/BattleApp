@@ -12,4 +12,5 @@ struct Action {
     var name: String
     var healthAdjustment: Int
     var cooldown = 0
+    var affectsSelf = false
 }

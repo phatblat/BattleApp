@@ -92,17 +92,20 @@ class SetupViewController: UIViewController {
         let action1 = Action(
             name: player1Action1Name.text!,
             healthAdjustment: damage1,
-            cooldown: cooldown1
+            cooldown: cooldown1,
+            affectsSelf: false
         )
         let action2 = Action(
             name: player1Action2Name.text!,
             healthAdjustment: damage2,
-            cooldown: cooldown2
+            cooldown: cooldown2,
+            affectsSelf: false
         )
         let action3 = Action(
             name: player1Action3Name.text!,
             healthAdjustment: damage3,
-            cooldown: cooldown3
+            cooldown: cooldown3,
+            affectsSelf: true
         )
         let player = Player(
             name: player1Name.text!,
@@ -141,17 +144,20 @@ class SetupViewController: UIViewController {
         let action1 = Action(
             name: player2Action1Name.text!,
             healthAdjustment: damage1,
-            cooldown: cooldown1
+            cooldown: cooldown1,
+            affectsSelf: false
         )
         let action2 = Action(
             name: player2Action2Name.text!,
             healthAdjustment: damage2,
-            cooldown: cooldown2
+            cooldown: cooldown2,
+            affectsSelf: false
         )
         let action3 = Action(
             name: player2Action3Name.text!,
             healthAdjustment: damage3,
-            cooldown: cooldown3
+            cooldown: cooldown3,
+            affectsSelf: true
         )
         let player = Player(
             name: player2Name.text!,
