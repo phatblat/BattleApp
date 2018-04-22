@@ -62,7 +62,7 @@ class SetupViewController: UIViewController {
     }
 
     @IBAction func unwindToSetup(segue: UIStoryboardSegue) {
-        debugPrint("\(segue.identifier) \(segue.destination)")
+        debugPrint("\(String(describing: segue.identifier)) \(segue.destination)")
     }
 
     func createPlayer1() -> Player? {

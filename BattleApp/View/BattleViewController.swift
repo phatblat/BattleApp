@@ -30,7 +30,7 @@ class BattleViewController: UIViewController {
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        debugPrint("\(segue.identifier) \(segue.destination)")
+        debugPrint("\(String(describing: segue.identifier)) \(segue.destination)")
     }
 
     @IBAction func endBattle(_ sender: Any) {
