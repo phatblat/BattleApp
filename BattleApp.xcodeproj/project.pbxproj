@@ -18,6 +18,7 @@
 		F815DD46208C11EA00823D8D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD45208C11EA00823D8D /* Player.swift */; };
 		F815DD48208C11F400823D8D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD47208C11F400823D8D /* Action.swift */; };
 		F815DD4B208C1B4000823D8D /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD4A208C1B4000823D8D /* Battle.swift */; };
+		F815DD4D208C250D00823D8D /* UIButton+Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD4C208C250D00823D8D /* UIButton+Title.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		F815DD45208C11EA00823D8D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F815DD47208C11F400823D8D /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		F815DD4A208C1B4000823D8D /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
+		F815DD4C208C250D00823D8D /* UIButton+Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Title.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +151,7 @@
 			children = (
 				F815DD42208C0DF500823D8D /* BattleViewController.swift */,
 				F815DD16208BF7B800823D8D /* SetupViewController.swift */,
+				F815DD4C208C250D00823D8D /* UIButton+Title.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F815DD4D208C250D00823D8D /* UIButton+Title.swift in Sources */,
 				F815DD46208C11EA00823D8D /* Player.swift in Sources */,
 				F815DD43208C0DF500823D8D /* BattleViewController.swift in Sources */,
 				F815DD17208BF7B800823D8D /* SetupViewController.swift in Sources */,

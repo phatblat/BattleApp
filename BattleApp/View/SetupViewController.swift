@@ -34,6 +34,7 @@ class SetupViewController: UIViewController {
     @IBOutlet var player2Action3Cooldown: UITextField!
 
     @IBOutlet var battleButton: UIButton!
+    var battle: Battle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,15 +44,23 @@ class SetupViewController: UIViewController {
         guard let id = segue.identifier else { return }
         if id != "battle" { return }
 
+        guard let realBattle = battle,
+            let battleVC = storyboard?.instantiateViewController(withIdentifier: "BattleViewController") as? BattleViewController
+            else { fatalError("BattleViewController not found in storyboard") }
+
+        battleVC.battle = realBattle
+
+        navigationController?.present(battleVC, animated: true)
+    }
+
+    @IBAction func validateInput(sender: UIButton) {
         let player1opt = createPlayer1()
         let player2opt = createPlayer2()
 
         guard let player1 = player1opt, let player2 = player2opt else { return }
 
-        let battle = Battle(players: [player1, player2], turnNumber: 1, roundNumber: 1)
-
-        guard let battleVC = segue.destination as? BattleViewController else { return }
-        battleVC.battle = battle
+        battle = Battle(players: [player1, player2], turnNumber: 1, roundNumber: 1)
+        performSegue(withIdentifier: "battle", sender: self)
     }
 
     func createPlayer1() -> Player? {

@@ -14,3 +14,9 @@ struct Player {
     var currentHealth: Int
     var actions: [Action]
 }
+
+extension Player {
+    var formattedHealth: String {
+        return "\(currentHealth) / \(totalHealth)"
+    }
+}
