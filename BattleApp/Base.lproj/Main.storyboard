@@ -519,7 +519,7 @@
                         <outlet property="player2Action3Name" destination="GJ3-ff-Nnf" id="B15-CG-y60"/>
                         <outlet property="player2Health" destination="Qw3-aH-hRd" id="XtJ-bu-v5g"/>
                         <outlet property="player2Name" destination="sVo-um-DVC" id="iW1-na-M9C"/>
-                        <segue destination="3Gb-a6-9ir" kind="show" identifier="battle" id="Mq8-L7-HhP"/>
+                        <segue destination="3Gb-a6-9ir" kind="showDetail" identifier="battle" id="Mq8-L7-HhP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -624,6 +624,17 @@
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zI4-wn-V0j">
+                                <rect key="frame" x="382" y="587" width="185" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
+                                <state key="normal" title="End Battle">
+                                    <color key="titleColor" red="1" green="0.58327470685498795" blue="0.04937169584087342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="endBattle:" destination="3Gb-a6-9ir" eventType="touchUpInside" id="QyA-YP-evU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.48477979274611394" green="0.02336313104021872" blue="0.0094730450152848335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="eXN-zi-LYZ"/>
@@ -640,9 +651,11 @@
                         <outlet property="player2Action3" destination="bMo-lp-KnI" id="eDa-vG-Tfr"/>
                         <outlet property="player2Health" destination="9kI-SE-1OI" id="mWe-CP-czl"/>
                         <outlet property="player2Name" destination="cjK-dT-Hju" id="M2p-db-Hxb"/>
+                        <segue destination="Ub8-Wi-hDe" kind="unwind" identifier="unwindToSetup" unwindAction="unwindToSetupWithSegue:" id="n8p-6p-cIk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0q3-FB-mId" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ub8-Wi-hDe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1502.9296875" y="33.59375"/>
         </scene>

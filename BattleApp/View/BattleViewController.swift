@@ -29,6 +29,28 @@ class BattleViewController: UIViewController {
         updateUI(battle: realBattle)
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        debugPrint("\(segue.identifier) \(segue.destination)")
+    }
+
+    @IBAction func endBattle(_ sender: Any) {
+        let alert = UIAlertController(
+            title: "End Battle?",
+            message: "Are you sure you want to exit this battle? You will lose all progress made in this battle.",
+            preferredStyle: .alert
+        )
+        let actionNo = UIAlertAction(title: "No", style: .cancel) { (_: UIAlertAction) in
+            alert.dismiss(animated: true)
+        }
+        let actionYes = UIAlertAction(title: "Yes", style: .destructive) { [weak self] (_: UIAlertAction) in
+            alert.dismiss(animated: true)
+            self?.performSegue(withIdentifier: "unwindToSetup", sender: self)
+        }
+        alert.addAction(actionNo)
+        alert.addAction(actionYes)
+        present(alert, animated: true)
+    }
+    
     func updateUI(battle: Battle) {
         let player1 = battle.players[0]
         player1Name.text = player1.name

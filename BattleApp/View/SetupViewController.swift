@@ -61,6 +61,10 @@ class SetupViewController: UIViewController {
         performSegue(withIdentifier: "battle", sender: self)
     }
 
+    @IBAction func unwindToSetup(segue: UIStoryboardSegue) {
+        debugPrint("\(segue.identifier) \(segue.destination)")
+    }
+
     func createPlayer1() -> Player? {
         guard let health = player1Health.text, let totalHealth = Int(health) else {
             return nil
