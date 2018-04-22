@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -60,9 +61,6 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="setPlayer1Name:" destination="BYZ-38-t0r" eventType="valueChanged" id="civ-xG-Iw0"/>
-                                                                </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="100" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kav-Id-WKY">
                                                                 <rect key="frame" x="0.0" y="40" width="120" height="30"/>
@@ -286,9 +284,6 @@
                                                                 <nil key="textColor"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
-                                                                <connections>
-                                                                    <action selector="setPlayer1Name:" destination="BYZ-38-t0r" eventType="valueChanged" id="iKM-hU-wF7"/>
-                                                                </connections>
                                                             </textField>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="102" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="50X-QT-oXY">
                                                                 <rect key="frame" x="0.0" y="40" width="120" height="30"/>
@@ -481,7 +476,7 @@
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                         <state key="normal" title="BATTLE!!"/>
                                         <connections>
-                                            <action selector="validateInputWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dKb-Jm-SrR"/>
+                                            <action selector="validateInputWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KGk-wr-zDd"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -553,7 +548,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Setup" id="kGB-Lf-9lO"/>
+                    <navigationItem key="navigationItem" title="Setup" id="kGB-Lf-9lO">
+                        <barButtonItem key="rightBarButtonItem" title="Battle!!" id="9DM-eW-Wx7">
+                            <connections>
+                                <action selector="validateInput:" destination="BYZ-38-t0r" id="DVS-Ik-1hd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="battleButton" destination="gW5-JW-s7s" id="Wpf-Mp-iLz"/>
                         <outlet property="player1Action1Cooldown" destination="q62-GL-sDH" id="ied-0D-fI1"/>

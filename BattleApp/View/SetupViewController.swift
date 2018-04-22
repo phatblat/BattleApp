@@ -51,7 +51,11 @@ class SetupViewController: UIViewController {
         battleVC.battle = realBattle
     }
 
-    @IBAction func validateInput(sender: UIButton) {
+    @IBAction func validateInputFromNavbar(_ sender: UIBarButtonItem) {
+        validateInput(sender)
+    }
+
+    @IBAction func validateInput(_ sender: Any) {
         let player1opt = createPlayer1()
         let player2opt = createPlayer2()
 
