@@ -37,7 +37,7 @@ class BattleViewController: UIViewController {
         player1Action2.setTitle(player1.actions[1].name)
         player1Action3.setTitle(player1.actions[2].name)
 
-        let player2 = battle.players[0]
+        let player2 = battle.players[1]
         player2Name.text = player2.name
         player2Health.text = player2.formattedHealth
         player2Action1.setTitle(player2.actions[0].name)
