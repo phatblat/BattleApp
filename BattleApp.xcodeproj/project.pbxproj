@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		F815DD15208BF7B800823D8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD14208BF7B800823D8D /* AppDelegate.swift */; };
-		F815DD17208BF7B800823D8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD16208BF7B800823D8D /* ViewController.swift */; };
+		F815DD17208BF7B800823D8D /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD16208BF7B800823D8D /* SetupViewController.swift */; };
 		F815DD1A208BF7B800823D8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F815DD18208BF7B800823D8D /* Main.storyboard */; };
 		F815DD1C208BF7BA00823D8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F815DD1B208BF7BA00823D8D /* Assets.xcassets */; };
 		F815DD1F208BF7BA00823D8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F815DD1D208BF7BA00823D8D /* LaunchScreen.storyboard */; };
 		F815DD2A208BF7BA00823D8D /* BattleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD29208BF7BA00823D8D /* BattleAppTests.swift */; };
 		F815DD35208BF7BA00823D8D /* BattleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD34208BF7BA00823D8D /* BattleAppUITests.swift */; };
+		F815DD43208C0DF500823D8D /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD42208C0DF500823D8D /* BattleViewController.swift */; };
+		F815DD46208C11EA00823D8D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD45208C11EA00823D8D /* Player.swift */; };
+		F815DD48208C11F400823D8D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD47208C11F400823D8D /* Action.swift */; };
+		F815DD4B208C1B4000823D8D /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD4A208C1B4000823D8D /* Battle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		F815DD11208BF7B800823D8D /* BattleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F815DD14208BF7B800823D8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F815DD16208BF7B800823D8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F815DD16208BF7B800823D8D /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		F815DD19208BF7B800823D8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F815DD1B208BF7BA00823D8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F815DD1E208BF7BA00823D8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		F815DD30208BF7BA00823D8D /* BattleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BattleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F815DD34208BF7BA00823D8D /* BattleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleAppUITests.swift; sourceTree = "<group>"; };
 		F815DD36208BF7BA00823D8D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F815DD42208C0DF500823D8D /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
+		F815DD45208C11EA00823D8D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		F815DD47208C11F400823D8D /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		F815DD4A208C1B4000823D8D /* Battle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				F815DD14208BF7B800823D8D /* AppDelegate.swift */,
-				F815DD16208BF7B800823D8D /* ViewController.swift */,
-				F815DD18208BF7B800823D8D /* Main.storyboard */,
 				F815DD1B208BF7BA00823D8D /* Assets.xcassets */,
-				F815DD1D208BF7BA00823D8D /* LaunchScreen.storyboard */,
 				F815DD20208BF7BA00823D8D /* Info.plist */,
+				F815DD1D208BF7BA00823D8D /* LaunchScreen.storyboard */,
+				F815DD18208BF7B800823D8D /* Main.storyboard */,
+				F815DD44208C11D700823D8D /* Model */,
+				F815DD49208C12CB00823D8D /* View */,
 			);
 			path = BattleApp;
 			sourceTree = "<group>";
@@ -123,6 +132,25 @@
 				F815DD36208BF7BA00823D8D /* Info.plist */,
 			);
 			path = BattleAppUITests;
+			sourceTree = "<group>";
+		};
+		F815DD44208C11D700823D8D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F815DD47208C11F400823D8D /* Action.swift */,
+				F815DD4A208C1B4000823D8D /* Battle.swift */,
+				F815DD45208C11EA00823D8D /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F815DD49208C12CB00823D8D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F815DD42208C0DF500823D8D /* BattleViewController.swift */,
+				F815DD16208BF7B800823D8D /* SetupViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F815DD17208BF7B800823D8D /* ViewController.swift in Sources */,
+				F815DD46208C11EA00823D8D /* Player.swift in Sources */,
+				F815DD43208C0DF500823D8D /* BattleViewController.swift in Sources */,
+				F815DD17208BF7B800823D8D /* SetupViewController.swift in Sources */,
+				F815DD48208C11F400823D8D /* Action.swift in Sources */,
 				F815DD15208BF7B800823D8D /* AppDelegate.swift in Sources */,
+				F815DD4B208C1B4000823D8D /* Battle.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

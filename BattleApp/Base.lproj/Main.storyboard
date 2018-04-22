@@ -13,7 +13,7 @@
         <!--Setup-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Setup" customClass="ViewController" customModule="BattleApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="Setup" customClass="SetupViewController" customModule="BattleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" userLabel="Setup">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +38,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="setPlayer1Name:" destination="BYZ-38-t0r" eventType="valueChanged" id="civ-xG-Iw0"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kav-Id-WKY">
                                 <rect key="frame" x="169" y="234" width="97" height="30"/>
@@ -419,7 +422,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                 <state key="normal" title="BATTLE!!"/>
                                 <connections>
-                                    <segue destination="3Gb-a6-9ir" kind="show" id="9G1-tf-SAQ"/>
+                                    <segue destination="3Gb-a6-9ir" kind="show" identifier="battle" id="9G1-tf-SAQ"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yDG-Bp-OFd">
@@ -492,6 +495,31 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Setup" id="kGB-Lf-9lO"/>
+                    <connections>
+                        <outlet property="battleButton" destination="gW5-JW-s7s" id="Wpf-Mp-iLz"/>
+                        <outlet property="player1Action1Cooldown" destination="q62-GL-sDH" id="ied-0D-fI1"/>
+                        <outlet property="player1Action1Damage" destination="RTa-Hi-ugw" id="6Iz-nh-1Bh"/>
+                        <outlet property="player1Action1Name" destination="oag-eC-GmD" id="mmt-gR-j97"/>
+                        <outlet property="player1Action2Cooldown" destination="ToP-vF-8lL" id="hgC-ml-qed"/>
+                        <outlet property="player1Action2Damage" destination="gFt-5E-iDg" id="o1i-Xp-TE6"/>
+                        <outlet property="player1Action2Name" destination="mNV-Ws-ozr" id="9mr-Sb-2mu"/>
+                        <outlet property="player1Action3Cooldown" destination="Toa-D1-BjL" id="HV8-uM-KDT"/>
+                        <outlet property="player1Action3Damage" destination="KK9-Rz-NaH" id="3qd-07-0h2"/>
+                        <outlet property="player1Action3Name" destination="Qv9-5o-ZFh" id="OMv-sM-Ttd"/>
+                        <outlet property="player1Health" destination="kav-Id-WKY" id="6QR-bG-GD3"/>
+                        <outlet property="player1Name" destination="JdE-Xi-EuP" id="XzS-GW-D7Z"/>
+                        <outlet property="player2Action1Cooldown" destination="89S-GX-hgo" id="m73-P4-vzM"/>
+                        <outlet property="player2Action1Damage" destination="itA-Pi-fiA" id="nrZ-Y7-Yvr"/>
+                        <outlet property="player2Action1Name" destination="brW-hI-kAz" id="t9G-kM-a1g"/>
+                        <outlet property="player2Action2Cooldown" destination="Ymh-hX-diE" id="9gj-lb-LRJ"/>
+                        <outlet property="player2Action2Damage" destination="jbQ-lv-t0Q" id="1kV-da-oMW"/>
+                        <outlet property="player2Action2Name" destination="ilh-0x-dzz" id="TpL-Gl-lqA"/>
+                        <outlet property="player2Action3Cooldown" destination="G2x-9Q-ZJ1" id="KfN-LM-ERK"/>
+                        <outlet property="player2Action3Damage" destination="fHH-38-EB6" id="6y4-Q2-bj4"/>
+                        <outlet property="player2Action3Name" destination="GJ3-ff-Nnf" id="B15-CG-y60"/>
+                        <outlet property="player2Health" destination="Qw3-aH-hRd" id="XtJ-bu-v5g"/>
+                        <outlet property="player2Name" destination="sVo-um-DVC" id="iW1-na-M9C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -500,7 +528,7 @@
         <!--Battle-->
         <scene sceneID="kaj-3S-RPh">
             <objects>
-                <viewController id="3Gb-a6-9ir" userLabel="Battle" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BattleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3Gb-a6-9ir" userLabel="Battle" customClass="BattleViewController" customModule="BattleApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IxG-CE-od1" userLabel="Battle">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -608,7 +636,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Vte-88-Jq7">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QjF-jT-Ecj" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="QjF-jT-Ecj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xvT-Rf-YI7">
                         <rect key="frame" x="0.0" y="20" width="1024" height="44"/>

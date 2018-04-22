@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  BattleViewController.swift
 //  BattleApp
 //
 //  Created by Ben Chatelain on 4/21/18.
@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BattleViewController: UIViewController {
+    var battle: Battle?
     override func viewDidLoad() {
         super.viewDidLoad()
     }
