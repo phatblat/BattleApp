@@ -23,6 +23,10 @@ struct Player {
     mutating func increaseHealth(amount: Int) {
         let previousValue = currentHealth
         currentHealth += amount
+        // Prevent health from going above total
+        if currentHealth > totalHealth {
+            currentHealth = totalHealth
+        }
         debugPrint("Player '\(name)' health increased from \(previousValue) to \(currentHealth)")
     }
 }
