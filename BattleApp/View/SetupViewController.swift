@@ -71,25 +71,38 @@ class SetupViewController: UIViewController {
 
     func createPlayer1() -> Player? {
         guard let health = player1Health.text, let totalHealth = Int(health) else {
+            error(message: "Player 1 health value is not valid.")
+            player1Health.becomeFirstResponder()
             return nil
         }
         guard let damage1Text = player1Action1Damage.text, let damage1 = Int(damage1Text) else {
+            error(message: "Player 1 action 1 damage value is not valid.")
+            player1Action1Damage.becomeFirstResponder()
             return nil
         }
         guard let cooldown1Text = player1Action1Cooldown.text, let cooldown1 = Int(cooldown1Text) else {
+            error(message: "Player 1 action 1 cooldown value is not valid.")
+            player1Action1Cooldown.becomeFirstResponder()
             return nil
         }
         guard let damage2Text = player1Action2Damage.text, let damage2 = Int(damage2Text) else {
+            error(message: "Player 1 action 2 damage value is not valid.")
+            player1Action2Damage.becomeFirstResponder()
             return nil
         }
         guard let cooldown2Text = player1Action2Cooldown.text, let cooldown2 = Int(cooldown2Text) else {
+            error(message: "Player 1 action 2 cooldown value is not valid.")
+            player1Action2Cooldown.becomeFirstResponder()
             return nil
         }
-
         guard let damage3Text = player1Action3Damage.text, let damage3 = Int(damage3Text) else {
+            error(message: "Player 1 action 3 damage value is not valid.")
+            player1Action3Damage.becomeFirstResponder()
             return nil
         }
         guard let cooldown3Text = player1Action3Cooldown.text, let cooldown3 = Int(cooldown3Text) else {
+            error(message: "Player 1 action 3 cooldown value is not valid.")
+            player1Action3Cooldown.becomeFirstResponder()
             return nil
         }
 
@@ -123,25 +136,38 @@ class SetupViewController: UIViewController {
 
     func createPlayer2() -> Player? {
         guard let health = player2Health.text, let totalHealth = Int(health) else {
+            error(message: "Player 2 health value is not valid.")
+            player2Health.becomeFirstResponder()
             return nil
         }
         guard let damage1Text = player2Action1Damage.text, let damage1 = Int(damage1Text) else {
+            error(message: "Player 2 action 1 damage value is not valid.")
+            player2Action1Damage.becomeFirstResponder()
             return nil
         }
         guard let cooldown1Text = player2Action1Cooldown.text, let cooldown1 = Int(cooldown1Text) else {
+            error(message: "Player 2 action 1 cooldown value is not valid.")
+            player2Action1Cooldown.becomeFirstResponder()
             return nil
         }
         guard let damage2Text = player2Action2Damage.text, let damage2 = Int(damage2Text) else {
+            error(message: "Player 2 action 2 damage value is not valid.")
+            player2Action2Damage.becomeFirstResponder()
             return nil
         }
         guard let cooldown2Text = player2Action2Cooldown.text, let cooldown2 = Int(cooldown2Text) else {
+            error(message: "Player 2 action 2 cooldown value is not valid.")
+            player2Action2Cooldown.becomeFirstResponder()
             return nil
         }
-
         guard let damage3Text = player2Action3Damage.text, let damage3 = Int(damage3Text) else {
+            error(message: "Player 2 action 3 damage value is not valid.")
+            player2Action1Damage.becomeFirstResponder()
             return nil
         }
         guard let cooldown3Text = player2Action3Cooldown.text, let cooldown3 = Int(cooldown3Text) else {
+            error(message: "Player 2 action 3 cooldown value is not valid.")
+            player2Action3Cooldown.becomeFirstResponder()
             return nil
         }
 
@@ -171,5 +197,19 @@ class SetupViewController: UIViewController {
         )
 
         return player
+    }
+
+    /// Presents an alert with a message and single button.
+    func error(message: String) {
+        let alert = UIAlertController(
+            title: "Input Error",
+            message: message,
+            preferredStyle: .alert
+        )
+        let action = UIAlertAction(title: "OK", style: .cancel) { (_: UIAlertAction) in
+            alert.dismiss(animated: true)
+        }
+        alert.addAction(action)
+        present(alert, animated: true)
     }
 }
