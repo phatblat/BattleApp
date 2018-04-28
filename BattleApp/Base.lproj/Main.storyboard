@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QjF-jT-Ecj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QjF-jT-Ecj">
     <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -595,10 +595,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qJZ-3g-UmI">
-                                <rect key="frame" x="0.0" y="70" width="768" height="289"/>
+                                <rect key="frame" x="0.0" y="70" width="768" height="340.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GWa-gK-5lN">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="289"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="340.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="apq-a2-QXC">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="31.5"/>
@@ -618,22 +618,28 @@
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2hu-bi-9fs">
+                                                <rect key="frame" x="-2" y="154.5" width="378" height="32.5"/>
+                                                <color key="minimumTrackTintColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="thumbTintColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </slider>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNm-5K-Daz">
-                                                <rect key="frame" x="0.0" y="154.5" width="374" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="206" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Attack 1 🤜🏻">
                                                     <color key="titleColor" red="0.97684099443275363" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5v-Da-Dxc">
-                                                <rect key="frame" x="0.0" y="206" width="374" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="257.5" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Attack 2 💥">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa9-la-fWV">
-                                                <rect key="frame" x="0.0" y="257.5" width="374" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="309" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Heal 💚">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -642,7 +648,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uj5-61-lep">
-                                        <rect key="frame" x="394" y="0.0" width="374" height="289"/>
+                                        <rect key="frame" x="394" y="0.0" width="374" height="340.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player 2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjK-dT-Hju">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="31.5"/>
@@ -662,22 +668,28 @@
                                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <slider opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1dz-UO-zhG">
+                                                <rect key="frame" x="-2" y="154.5" width="378" height="32.5"/>
+                                                <color key="minimumTrackTintColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="thumbTintColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </slider>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxe-xI-5xf">
-                                                <rect key="frame" x="0.0" y="154.5" width="374" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="206" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Attack 1 🤜🏻">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNO-4S-etZ">
-                                                <rect key="frame" x="0.0" y="206" width="374" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="257.5" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Attack 2 💥">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-lp-KnI">
-                                                <rect key="frame" x="0.0" y="257.5" width="374" height="31.5"/>
+                                                <rect key="frame" x="0.0" y="309" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Heal 💚">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -688,7 +700,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zI4-wn-V0j">
-                                <rect key="frame" x="291.5" y="409" width="185" height="585"/>
+                                <rect key="frame" x="291.5" y="460.5" width="185" height="533.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                 <state key="normal" title="End Battle">
                                     <color key="titleColor" red="1" green="0.58327470685498795" blue="0.04937169584087342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -698,7 +710,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.48477979274611394" green="0.02336313104021872" blue="0.0094730450152848335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.34636032819747919" green="0.067807032023054409" blue="0.03885970562529991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="zI4-wn-V0j" firstAttribute="top" secondItem="qJZ-3g-UmI" secondAttribute="bottom" constant="50" id="6lz-Ft-DLZ"/>
                             <constraint firstItem="qJZ-3g-UmI" firstAttribute="leading" secondItem="eXN-zi-LYZ" secondAttribute="leading" id="8x1-7o-Qmm"/>
@@ -715,11 +727,13 @@
                         <outlet property="player1Action2" destination="y5v-Da-Dxc" id="QYc-5D-YX6"/>
                         <outlet property="player1Action3" destination="Qa9-la-fWV" id="bVg-OI-ToX"/>
                         <outlet property="player1Health" destination="uMH-G0-7sX" id="SzV-5X-nC0"/>
+                        <outlet property="player1HealthBar" destination="2hu-bi-9fs" id="hBE-Tt-BSw"/>
                         <outlet property="player1Name" destination="apq-a2-QXC" id="ZIy-ef-PBY"/>
                         <outlet property="player2Action1" destination="mxe-xI-5xf" id="mM5-07-FL0"/>
                         <outlet property="player2Action2" destination="LNO-4S-etZ" id="aJe-QA-WXv"/>
                         <outlet property="player2Action3" destination="bMo-lp-KnI" id="eDa-vG-Tfr"/>
                         <outlet property="player2Health" destination="9kI-SE-1OI" id="mWe-CP-czl"/>
+                        <outlet property="player2HealthBar" destination="1dz-UO-zhG" id="fcv-t6-FIf"/>
                         <outlet property="player2Name" destination="cjK-dT-Hju" id="M2p-db-Hxb"/>
                         <segue destination="Ub8-Wi-hDe" kind="unwind" identifier="unwindToSetup" unwindAction="unwindToSetupWithSegue:" id="n8p-6p-cIk"/>
                     </connections>
@@ -727,7 +741,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0q3-FB-mId" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Ub8-Wi-hDe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1502.9296875" y="33.59375"/>
+            <point key="canvasLocation" x="1502.34375" y="33.3984375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vte-88-Jq7">

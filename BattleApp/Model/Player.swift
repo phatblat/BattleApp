@@ -39,6 +39,12 @@ extension Player {
     var formattedHealth: String {
         return "\(currentHealth) / \(totalHealth)"
     }
+
+    /// returns a value between 0 and 1.
+    var healthPercentage: Float {
+        guard totalHealth > 0 else { return 0 }
+        return Float(currentHealth) / Float(totalHealth)
+    }
 }
 
 extension Player: Equatable {
