@@ -206,7 +206,7 @@ class SetupViewController: UIViewController {
             message: message,
             preferredStyle: .alert
         )
-        let action = UIAlertAction(title: "OK", style: .cancel) { (_: UIAlertAction) in
+        let action = UIAlertAction(title: "OK", style: .cancel) { _ in
             alert.dismiss(animated: true)
         }
         alert.addAction(action)
