@@ -9,9 +9,12 @@
 import UIKit
 
 extension UIButton {
-    func setTitle(_ title: String) {
-        setTitle(title, for: UIControlState.normal)
-        setTitle(title, for: UIControlState.selected)
+    var title: String {
+        set(value) {
+            setTitle(value, for: UIControlState.normal)
+            setTitle(value, for: UIControlState.selected)
+        }
+        get { return title(for: UIControlState.normal) ?? "" }
     }
 }
 

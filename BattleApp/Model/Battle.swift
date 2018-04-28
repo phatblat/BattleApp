@@ -10,8 +10,24 @@ import Foundation
 
 struct Battle {
     var players: [Player]
+    
     /// Indicates the player whose turn it is.
-    var turnNumber = 1
+    var turnNumber: Int
+
     /// Each pair of turns is a round.
-    var roundNumber = 1
+    var roundNumber: Int
+
+    init(players: [Player], turnNumber: Int = 0, roundNumber: Int = 1) {
+        self.players = players
+        self.turnNumber = turnNumber
+        self.roundNumber = roundNumber
+    }
+
+    mutating func nextTurn() {
+        turnNumber = (turnNumber + 1) % 2
+        if turnNumber == 0 {
+            roundNumber += 1
+        }
+        print("round \(roundNumber), turn \(turnNumber)")
+    }
 }

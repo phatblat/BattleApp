@@ -630,6 +630,9 @@
                                                 <state key="normal" title="Attack 1 🤜🏻">
                                                     <color key="titleColor" red="0.97684099443275363" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5v-Da-Dxc">
                                                 <rect key="frame" x="0.0" y="257.5" width="374" height="31.5"/>
@@ -637,12 +640,18 @@
                                                 <state key="normal" title="Attack 2 💥">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qa9-la-fWV">
                                                 <rect key="frame" x="0.0" y="309" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Heal 💚">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                         </subviews>
@@ -680,6 +689,9 @@
                                                 <state key="normal" title="Attack 1 🤜🏻">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LNO-4S-etZ">
                                                 <rect key="frame" x="0.0" y="257.5" width="374" height="31.5"/>
@@ -687,12 +699,18 @@
                                                 <state key="normal" title="Attack 2 💥">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bMo-lp-KnI">
                                                 <rect key="frame" x="0.0" y="309" width="374" height="31.5"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="15"/>
                                                 <state key="normal" title="Heal 💚">
                                                     <color key="titleColor" red="0.97684099440000005" green="1" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
                                         </subviews>
@@ -735,6 +753,12 @@
                         <outlet property="player2Health" destination="9kI-SE-1OI" id="mWe-CP-czl"/>
                         <outlet property="player2HealthBar" destination="1dz-UO-zhG" id="fcv-t6-FIf"/>
                         <outlet property="player2Name" destination="cjK-dT-Hju" id="M2p-db-Hxb"/>
+                        <outletCollection property="player2Actions" destination="LNO-4S-etZ" collectionClass="NSMutableArray" id="ipE-kC-WHT"/>
+                        <outletCollection property="player1Actions" destination="ZNm-5K-Daz" collectionClass="NSMutableArray" id="msa-kP-Sd1"/>
+                        <outletCollection property="player1Actions" destination="y5v-Da-Dxc" collectionClass="NSMutableArray" id="cMe-Q7-p4P"/>
+                        <outletCollection property="player1Actions" destination="Qa9-la-fWV" collectionClass="NSMutableArray" id="5qI-mj-qCo"/>
+                        <outletCollection property="player2Actions" destination="mxe-xI-5xf" collectionClass="NSMutableArray" id="0xB-l3-Bgt"/>
+                        <outletCollection property="player2Actions" destination="bMo-lp-KnI" collectionClass="NSMutableArray" id="foW-Tp-p8J"/>
                         <segue destination="Ub8-Wi-hDe" kind="unwind" identifier="unwindToSetup" unwindAction="unwindToSetupWithSegue:" id="n8p-6p-cIk"/>
                     </connections>
                 </viewController>

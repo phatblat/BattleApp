@@ -61,7 +61,7 @@ class SetupViewController: UIViewController {
 
         guard let player1 = player1opt, let player2 = player2opt else { return }
 
-        battle = Battle(players: [player1, player2], turnNumber: 1, roundNumber: 1)
+        battle = Battle(players: [player1, player2])
         performSegue(withIdentifier: "battle", sender: self)
     }
 
