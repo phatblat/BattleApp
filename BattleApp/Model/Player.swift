@@ -17,6 +17,10 @@ struct Player {
     mutating func reduceHealth(amount: Int) {
         let previousValue = currentHealth
         currentHealth -= amount
+        // Prevent health from going negative
+        if currentHealth < 0 {
+            currentHealth = 0
+        }
         debugPrint("Player '\(name)' health reduced from \(previousValue) to \(currentHealth)")
     }
     
