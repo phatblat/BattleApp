@@ -33,6 +33,20 @@ struct Player {
         }
         debugPrint("Player '\(name)' health increased from \(previousValue) to \(currentHealth)")
     }
+    
+    /// Reduces cooldown timers on all actions.
+    ///
+    /// - Returns: true if any actions were modified; false otherwise
+    mutating func reduceCooldowns() -> Bool {
+        var modified = false
+        for (index, var action) in actions.enumerated() {
+            if action.reduceCooldown() {
+                actions[index] = action
+                modified = true
+            }
+        }
+        return modified
+    }
 }
 
 extension Player {

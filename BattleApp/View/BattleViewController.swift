@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// Displays current battle progress and player action buttons.
 class BattleViewController: UIViewController {
     @IBOutlet var player1Name: UILabel!
     @IBOutlet var player1Health: UILabel!
@@ -25,6 +26,7 @@ class BattleViewController: UIViewController {
     @IBOutlet var player2Action3: UIButton!
     @IBOutlet var player2Actions: [UIButton]!
 
+    /// Model for the app.
     var battle: Battle?
 
     override func viewDidLoad() {
@@ -37,6 +39,7 @@ class BattleViewController: UIViewController {
         debugPrint("\(String(describing: segue.identifier)) \(segue.destination)")
     }
 
+    /// User-initiated end of battle.
     @IBAction func endBattle(_ sender: Any) {
         let alert = UIAlertController(
             title: "End Battle?",
@@ -55,11 +58,13 @@ class BattleViewController: UIViewController {
         present(alert, animated: true)
     }
 
+    /// Convenience overload which unwraps the model.
     func updateUI() {
         guard let realBattle = battle else { return }
         updateUI(battle: realBattle)
     }
 
+    /// Updates the UI with the current state of the model.
     func updateUI(battle: Battle) {
         let player1 = battle.players[0]
         let player2 = battle.players[1]
@@ -67,31 +72,40 @@ class BattleViewController: UIViewController {
         player1Name.text = player1.name
         player1Health.text = player1.formattedHealth
         player1HealthBar.value = player1.healthPercentage
-        player1Action1.title = formatTitle("👊🏻", player1.actions[0].name, player1.actions[0].healthAdjustment)
-        player1Action2.title = formatTitle("💥", player1.actions[1].name, player1.actions[1].healthAdjustment)
-        player1Action3.title = formatTitle("💚", player1.actions[2].name, player1.actions[2].healthAdjustment)
+        player1Action1.title = formatTitle("👊🏻", player1.actions[0])
+        player1Action2.title = formatTitle("💥", player1.actions[1])
+        player1Action3.title = formatTitle("💚", player1.actions[2])
 
         player2Name.text = player2.name
         player2Health.text = player2.formattedHealth
         player2HealthBar.value = player2.healthPercentage
-        player2Action1.title = formatTitle("👊🏻", player2.actions[0].name, player2.actions[0].healthAdjustment)
-        player2Action2.title = formatTitle("💥", player2.actions[1].name, player2.actions[1].healthAdjustment)
-        player2Action3.title = formatTitle("💚", player2.actions[2].name, player2.actions[2].healthAdjustment)
+        player2Action1.title = formatTitle("👊🏻", player2.actions[0])
+        player2Action2.title = formatTitle("💥", player2.actions[1])
+        player2Action3.title = formatTitle("💚", player2.actions[2])
 
         // Enforce turns by disabling buttons
         let enableActions: [UIButton]
         let disableActions: [UIButton]
+        let activePlayer: Player
         if battle.turnNumber % 2 == 0 {
             // Player 1 goes on even numbered turns
+            activePlayer = player1
             enableActions = player1Actions
             disableActions = player2Actions
         } else {
             // Player 2 goes on odd numbered turns
+            activePlayer = player2
             enableActions = player2Actions
             disableActions = player1Actions
         }
-        enableActions.forEach { button in
-            button.isEnabled = true
+        for (index, button) in enableActions.enumerated() {
+            let action = activePlayer.actions[index]
+            if action.isOnCooldown {
+                // Don't enable actions still on cooldown
+                button.isEnabled = false
+            } else {
+                button.isEnabled = true
+            }
         }
         disableActions.forEach { button in
             button.isEnabled = false
@@ -99,10 +113,16 @@ class BattleViewController: UIViewController {
     }
 
     /// Formats a string for display.
-    func formatTitle(_ emoji: String, _ actionName: String, _ healthAmount: Int) -> String {
+    func formatTitle(_ emoji: String, _ action: Action) -> String {
+        let actionName = action.name
+        let healthAmount = action.healthAdjustment
+        if action.isOnCooldown {
+            return "\(emoji)\n\(actionName)\n(\(healthAmount))\ncooldown: \(action.currentCooldown)"
+        }
         return "\(emoji)\n\(actionName)\n(\(healthAmount))"
     }
 
+    /// Wires up actions to buttons using closures.
     func wireUpButtonActions() {
         player1Action1.add(for: .touchUpInside) { [weak self] in
             self?.performAction(playerNumber: .one, actionNumber: 1)
@@ -130,6 +150,7 @@ class BattleViewController: UIViewController {
         }
     }
 
+    /// Invokes a player action.
     func performAction(playerNumber: PlayerNum, actionNumber: Int) {
         guard var realBattle = battle else { return }
 
@@ -148,11 +169,18 @@ class BattleViewController: UIViewController {
             otherPlayer = player1
         }
 
-        let action = player.actions[actionNumber - 1]
+        var action = player.actions[actionNumber - 1]
         if action.affectsSelf {
             player.increaseHealth(amount: action.healthAdjustment)
         } else {
             otherPlayer.reduceHealth(amount: action.healthAdjustment)
+        }
+
+        // Update cooldown counter
+        if action.cooldown > 0 {
+            action.currentCooldown = action.cooldown
+            // Update the set of actions with the modified structs!
+            player.actions[actionNumber - 1] = action
         }
 
         // Make sure to update the battle with the modified structs!

@@ -23,10 +23,17 @@ struct Battle {
         self.roundNumber = roundNumber
     }
 
+    /// Updates models to prepare for the next turn and round.
     mutating func nextTurn() {
         turnNumber = (turnNumber + 1) % 2
         if turnNumber == 0 {
+            // New round, reduce cooldowns
             roundNumber += 1
+            for (index, var player) in players.enumerated() {
+                if player.reduceCooldowns() {
+                    players[index] = player
+                }
+            }
         }
         print("round \(roundNumber), turn \(turnNumber)")
     }
