@@ -724,7 +724,7 @@
                                     <color key="titleColor" red="1" green="0.58327470685498795" blue="0.04937169584087342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="endBattle:" destination="3Gb-a6-9ir" eventType="touchUpInside" id="QyA-YP-evU"/>
+                                    <action selector="abortBattle:" destination="3Gb-a6-9ir" eventType="touchUpInside" id="UEN-CS-ci5"/>
                                 </connections>
                             </button>
                         </subviews>

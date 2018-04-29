@@ -17,6 +17,9 @@ struct Battle {
     /// Each pair of turns is a round.
     var roundNumber: Int
 
+    /// Indicates when the batthe is over.
+    var active = true
+
     init(players: [Player], turnNumber: Int = 0, roundNumber: Int = 1) {
         self.players = players
         self.turnNumber = turnNumber

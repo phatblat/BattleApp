@@ -40,7 +40,7 @@ class BattleViewController: UIViewController {
     }
 
     /// User-initiated end of battle.
-    @IBAction func endBattle(_ sender: Any) {
+    @IBAction func abortBattle(_ sender: Any) {
         let alert = UIAlertController(
             title: "End Battle?",
             message: "Are you sure you want to exit this battle? You will lose all progress made in this battle.",
@@ -55,6 +55,20 @@ class BattleViewController: UIViewController {
         }
         alert.addAction(actionNo)
         alert.addAction(actionYes)
+        present(alert, animated: true)
+    }
+
+    func endBattle(winner: Player) {
+        let alert = UIAlertController(
+            title: "Battle Over",
+            message: "Congratulations! \(winner.name) has won this battle.",
+            preferredStyle: .alert
+        )
+        let action = UIAlertAction(title: "🎉 Hooray! 👑", style: .cancel) { (_: UIAlertAction) in
+            alert.dismiss(animated:  true)
+        }
+        alert.addAction(action)
+
         present(alert, animated: true)
     }
 
@@ -100,7 +114,7 @@ class BattleViewController: UIViewController {
         }
         for (index, button) in enableActions.enumerated() {
             let action = activePlayer.actions[index]
-            if action.isOnCooldown || action.healthAdjustment == 0 {
+            if action.isOnCooldown || action.healthAdjustment == 0 || !battle.active {
                 // Don't enable actions still on cooldown or without damage
                 button.isEnabled = false
             } else {
@@ -175,6 +189,10 @@ class BattleViewController: UIViewController {
             player.increaseHealth(amount: action.healthAdjustment)
         } else {
             otherPlayer.reduceHealth(amount: action.healthAdjustment)
+            if otherPlayer.currentHealth == 0 {
+                endBattle(winner: player)
+                realBattle.active = false
+            }
         }
 
         // Update cooldown counter
