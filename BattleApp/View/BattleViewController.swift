@@ -117,7 +117,8 @@ class BattleViewController: UIViewController {
         let actionName = action.name
         let healthAmount = action.healthAdjustment
         if action.isOnCooldown {
-            return "\(emoji)\n\(actionName)\n(\(healthAmount))\ncooldown: \(action.currentCooldown)"
+            let displayCooldown = action.currentCooldown
+            return "\(emoji)\n\(actionName)\n(\(healthAmount))\ncooldown: \(displayCooldown)"
         }
         return "\(emoji)\n\(actionName)\n(\(healthAmount))"
     }
@@ -178,7 +179,8 @@ class BattleViewController: UIViewController {
 
         // Update cooldown counter
         if action.cooldown > 0 {
-            action.currentCooldown = action.cooldown
+            // FIXME: Adding one becuase nextTurn will reduce currentCooldown
+            action.currentCooldown = action.cooldown + 1
             // Update the set of actions with the modified structs!
             player.actions[actionNumber - 1] = action
         }

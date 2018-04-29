@@ -21,20 +21,35 @@ struct Battle {
         self.players = players
         self.turnNumber = turnNumber
         self.roundNumber = roundNumber
+        
+        print("round \(roundNumber), turn \(turnNumber)")
     }
 
     /// Updates models to prepare for the next turn and round.
     mutating func nextTurn() {
+        // Reduce current player's cooldowns
+        var player = currentPlayer
+        if player.reduceCooldowns() {
+            currentPlayer = player
+        }
+
         turnNumber = (turnNumber + 1) % 2
         if turnNumber == 0 {
-            // New round, reduce cooldowns
             roundNumber += 1
-            for (index, var player) in players.enumerated() {
-                if player.reduceCooldowns() {
-                    players[index] = player
-                }
-            }
         }
+
         print("round \(roundNumber), turn \(turnNumber)")
+    }
+}
+
+extension Battle {
+    /// Convenience property for managing the current player
+    var currentPlayer: Player {
+        get {
+            return players[turnNumber]
+        }
+        set(value) {
+            players[turnNumber] = value
+        }
     }
 }
