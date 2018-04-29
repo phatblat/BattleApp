@@ -100,8 +100,8 @@ class BattleViewController: UIViewController {
         }
         for (index, button) in enableActions.enumerated() {
             let action = activePlayer.actions[index]
-            if action.isOnCooldown {
-                // Don't enable actions still on cooldown
+            if action.isOnCooldown || action.healthAdjustment == 0 {
+                // Don't enable actions still on cooldown or without damage
                 button.isEnabled = false
             } else {
                 button.isEnabled = true
