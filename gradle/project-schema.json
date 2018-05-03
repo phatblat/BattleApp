@@ -1,0 +1,13 @@
+{
+    ":": {
+        "conventions": {
+            
+        },
+        "configurations": [
+            
+        ],
+        "extensions": {
+            "ext": "org.gradle.api.plugins.ExtraPropertiesExtension"
+        }
+    }
+}

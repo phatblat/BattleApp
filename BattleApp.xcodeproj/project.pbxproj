@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A504CB97D850DC308199E390 /* Pods_BattleAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7120867F87DBA35DBCC89FD /* Pods_BattleAppUITests.framework */; };
+		AFCB6695DB5D8E46C1D3E903 /* Pods_BattleAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E278F909630F5CB833A9AB1F /* Pods_BattleAppTests.framework */; };
+		DC4E8552497A3B0D8B1E4FF2 /* Pods_BattleApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D491B7AB57B91CD58C268EC6 /* Pods_BattleApp.framework */; };
 		F815DD15208BF7B800823D8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD14208BF7B800823D8D /* AppDelegate.swift */; };
 		F815DD17208BF7B800823D8D /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F815DD16208BF7B800823D8D /* SetupViewController.swift */; };
 		F815DD1A208BF7B800823D8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F815DD18208BF7B800823D8D /* Main.storyboard */; };
@@ -39,6 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0236E63C87A222D6E5421514 /* Pods-BattleAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleAppTests/Pods-BattleAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		0EA19D5A56A84F7388EA75BA /* Pods-BattleApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleApp/Pods-BattleApp.release.xcconfig"; sourceTree = "<group>"; };
+		893CCF4CF27CF982A533C305 /* Pods-BattleAppUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleAppUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleAppUITests/Pods-BattleAppUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A4252501D0D4501040E43FD0 /* Pods-BattleAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleAppTests/Pods-BattleAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A7120867F87DBA35DBCC89FD /* Pods_BattleAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB8D78ECEF18DCFC2585B6A4 /* Pods-BattleAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleAppUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BattleAppUITests/Pods-BattleAppUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CCBEEA606C330433DF1D9FC1 /* Pods-BattleApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BattleApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BattleApp/Pods-BattleApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D491B7AB57B91CD58C268EC6 /* Pods_BattleApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E278F909630F5CB833A9AB1F /* Pods_BattleAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BattleAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F815DD11208BF7B800823D8D /* BattleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BattleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F815DD14208BF7B800823D8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F815DD16208BF7B800823D8D /* SetupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
@@ -64,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC4E8552497A3B0D8B1E4FF2 /* Pods_BattleApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFCB6695DB5D8E46C1D3E903 /* Pods_BattleAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,12 +92,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A504CB97D850DC308199E390 /* Pods_BattleAppUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1CD5B476C5DAE022060D1599 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCBEEA606C330433DF1D9FC1 /* Pods-BattleApp.debug.xcconfig */,
+				0EA19D5A56A84F7388EA75BA /* Pods-BattleApp.release.xcconfig */,
+				A4252501D0D4501040E43FD0 /* Pods-BattleAppTests.debug.xcconfig */,
+				0236E63C87A222D6E5421514 /* Pods-BattleAppTests.release.xcconfig */,
+				893CCF4CF27CF982A533C305 /* Pods-BattleAppUITests.debug.xcconfig */,
+				AB8D78ECEF18DCFC2585B6A4 /* Pods-BattleAppUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		AF52F718C0489395CF431738 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D491B7AB57B91CD58C268EC6 /* Pods_BattleApp.framework */,
+				E278F909630F5CB833A9AB1F /* Pods_BattleAppTests.framework */,
+				A7120867F87DBA35DBCC89FD /* Pods_BattleAppUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F815DD08208BF7B800823D8D = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +129,8 @@
 				F815DD28208BF7BA00823D8D /* BattleAppTests */,
 				F815DD33208BF7BA00823D8D /* BattleAppUITests */,
 				F815DD12208BF7B800823D8D /* Products */,
+				1CD5B476C5DAE022060D1599 /* Pods */,
+				AF52F718C0489395CF431738 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,9 +203,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F815DD39208BF7BA00823D8D /* Build configuration list for PBXNativeTarget "BattleApp" */;
 			buildPhases = (
+				DE6F0FD0328B4F296A8FEE79 /* [CP] Check Pods Manifest.lock */,
 				F815DD0D208BF7B800823D8D /* Sources */,
 				F815DD0E208BF7B800823D8D /* Frameworks */,
 				F815DD0F208BF7B800823D8D /* Resources */,
+				F819749020956393000FE8EF /* 💥 Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -180,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F815DD3C208BF7BA00823D8D /* Build configuration list for PBXNativeTarget "BattleAppTests" */;
 			buildPhases = (
+				31C29343526C3BC5B3C7BF18 /* [CP] Check Pods Manifest.lock */,
 				F815DD21208BF7BA00823D8D /* Sources */,
 				F815DD22208BF7BA00823D8D /* Frameworks */,
 				F815DD23208BF7BA00823D8D /* Resources */,
@@ -198,6 +241,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F815DD3F208BF7BA00823D8D /* Build configuration list for PBXNativeTarget "BattleAppUITests" */;
 			buildPhases = (
+				0BD9389BB4008F6F42833803 /* [CP] Check Pods Manifest.lock */,
 				F815DD2C208BF7BA00823D8D /* Sources */,
 				F815DD2D208BF7BA00823D8D /* Frameworks */,
 				F815DD2E208BF7BA00823D8D /* Resources */,
@@ -281,6 +325,77 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BD9389BB4008F6F42833803 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BattleAppUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31C29343526C3BC5B3C7BF18 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BattleAppTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DE6F0FD0328B4F296A8FEE79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BattleApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F819749020956393000FE8EF /* 💥 Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "💥 Crashlytics";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" f19b713169ed2a9d192a1d55c52f713819230724 5ba1f0b12a914d2bb8a29af9f88d4e746987d76e8128b8d683231a374b98b1f7";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F815DD0D208BF7B800823D8D /* Sources */ = {
@@ -382,7 +497,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -405,6 +521,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
@@ -442,6 +559,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -459,20 +577,19 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
 		};
 		F815DD3A208BF7BA00823D8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCBEEA606C330433DF1D9FC1 /* Pods-BattleApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				INFOPLIST_FILE = BattleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.BattleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -482,15 +599,13 @@
 		};
 		F815DD3B208BF7BA00823D8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EA19D5A56A84F7388EA75BA /* Pods-BattleApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				INFOPLIST_FILE = BattleApp/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.BattleApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -500,17 +615,14 @@
 		};
 		F815DD3D208BF7BA00823D8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4252501D0D4501040E43FD0 /* Pods-BattleAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				INFOPLIST_FILE = BattleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.BattleAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -521,17 +633,14 @@
 		};
 		F815DD3E208BF7BA00823D8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0236E63C87A222D6E5421514 /* Pods-BattleAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				INFOPLIST_FILE = BattleAppTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.BattleAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -542,16 +651,13 @@
 		};
 		F815DD40208BF7BA00823D8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 893CCF4CF27CF982A533C305 /* Pods-BattleAppUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				INFOPLIST_FILE = BattleAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.BattleAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -562,16 +668,13 @@
 		};
 		F815DD41208BF7BA00823D8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB8D78ECEF18DCFC2585B6A4 /* Pods-BattleAppUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MTGSZH8QM4;
 				INFOPLIST_FILE = BattleAppUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = at.phatbl.BattleAppUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
