@@ -753,11 +753,11 @@
                         <outlet property="player2Health" destination="9kI-SE-1OI" id="mWe-CP-czl"/>
                         <outlet property="player2HealthBar" destination="1dz-UO-zhG" id="fcv-t6-FIf"/>
                         <outlet property="player2Name" destination="cjK-dT-Hju" id="M2p-db-Hxb"/>
-                        <outletCollection property="player2Actions" destination="LNO-4S-etZ" collectionClass="NSMutableArray" id="ipE-kC-WHT"/>
                         <outletCollection property="player1Actions" destination="ZNm-5K-Daz" collectionClass="NSMutableArray" id="msa-kP-Sd1"/>
                         <outletCollection property="player1Actions" destination="y5v-Da-Dxc" collectionClass="NSMutableArray" id="cMe-Q7-p4P"/>
                         <outletCollection property="player1Actions" destination="Qa9-la-fWV" collectionClass="NSMutableArray" id="5qI-mj-qCo"/>
                         <outletCollection property="player2Actions" destination="mxe-xI-5xf" collectionClass="NSMutableArray" id="0xB-l3-Bgt"/>
+                        <outletCollection property="player2Actions" destination="LNO-4S-etZ" collectionClass="NSMutableArray" id="ipE-kC-WHT"/>
                         <outletCollection property="player2Actions" destination="bMo-lp-KnI" collectionClass="NSMutableArray" id="foW-Tp-p8J"/>
                         <segue destination="Ub8-Wi-hDe" kind="unwind" identifier="unwindToSetup" unwindAction="unwindToSetupWithSegue:" id="n8p-6p-cIk"/>
                     </connections>
