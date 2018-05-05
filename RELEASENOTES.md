@@ -1,1 +1,1 @@
-- 🎉 Initial release! 👊🏻
+- 🐛 Fixed cooldown on player 2's 1st and 2nd actions. #16
