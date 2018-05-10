@@ -6,12 +6,12 @@
 import at.phatbl.shellexec.ShellExec
 
 plugins {
-    id("at.phatbl.clamp") version "1.0.0"
+    id("at.phatbl.clamp") version "1.1.0"
     id("at.phatbl.shellexec") version "1.1.3"
 }
 
-val crashlyticsApiKey by project
-val crashlyticsBuildSecret by project
+val crashlyticsApiKey: String by project
+val crashlyticsBuildSecret: String by project
 
 val crashlyticsDeploy by tasks.creating(ShellExec::class) {
     description = "Deploys the app to Crahlytics Beta."
