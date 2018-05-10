@@ -55,10 +55,10 @@ class BattleViewController: UIViewController {
             message: "Are you sure you want to exit this battle? You will lose all progress made in this battle.",
             preferredStyle: .alert
         )
-        let actionNo = UIAlertAction(title: "No", style: .cancel) { (_: UIAlertAction) in
+        let actionNo = UIAlertAction(title: "No", style: .cancel) { _ in
             alert.dismiss(animated: true)
         }
-        let actionYes = UIAlertAction(title: "Yes", style: .destructive) { [weak self] (_: UIAlertAction) in
+        let actionYes = UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
             alert.dismiss(animated: true)
             self?.performSegue(withIdentifier: "unwindToSetup", sender: self)
         }
@@ -73,7 +73,7 @@ class BattleViewController: UIViewController {
             message: "Congratulations! \(winner.name) has won this battle.",
             preferredStyle: .alert
         )
-        let action = UIAlertAction(title: "🎉 Hooray! 👑", style: .cancel) { (_: UIAlertAction) in
+        let action = UIAlertAction(title: "🎉 Hooray! 👑", style: .cancel) { _ in
             alert.dismiss(animated:  true)
         }
         alert.addAction(action)
