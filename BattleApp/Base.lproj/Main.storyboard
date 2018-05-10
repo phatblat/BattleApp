@@ -594,8 +594,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Round 999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bFQ-EI-Nca">
+                                <rect key="frame" x="341.5" y="20" width="85" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qJZ-3g-UmI">
-                                <rect key="frame" x="0.0" y="70" width="768" height="340.5"/>
+                                <rect key="frame" x="0.0" y="60.5" width="768" height="340.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="GWa-gK-5lN">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="340.5"/>
@@ -718,7 +724,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zI4-wn-V0j">
-                                <rect key="frame" x="291.5" y="460.5" width="185" height="533.5"/>
+                                <rect key="frame" x="291.5" y="451" width="185" height="543"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="39"/>
                                 <state key="normal" title="End Battle">
                                     <color key="titleColor" red="1" green="0.58327470685498795" blue="0.04937169584087342" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -739,10 +745,12 @@
                             <constraint firstItem="Jun-JS-1h0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eXN-zi-LYZ" secondAttribute="leading" constant="50" id="2Zd-PW-2Xu"/>
                             <constraint firstItem="zI4-wn-V0j" firstAttribute="top" secondItem="qJZ-3g-UmI" secondAttribute="bottom" constant="50" id="6lz-Ft-DLZ"/>
                             <constraint firstItem="qJZ-3g-UmI" firstAttribute="leading" secondItem="eXN-zi-LYZ" secondAttribute="leading" id="8x1-7o-Qmm"/>
-                            <constraint firstItem="qJZ-3g-UmI" firstAttribute="width" secondItem="eXN-zi-LYZ" secondAttribute="width" id="FvP-kJ-ZLG"/>
+                            <constraint firstItem="eXN-zi-LYZ" firstAttribute="top" secondItem="bFQ-EI-Nca" secondAttribute="top" id="Mub-4W-Vl3"/>
+                            <constraint firstItem="bFQ-EI-Nca" firstAttribute="centerX" secondItem="eXN-zi-LYZ" secondAttribute="centerX" id="PLQ-wc-PHi"/>
                             <constraint firstItem="zI4-wn-V0j" firstAttribute="centerX" secondItem="IxG-CE-od1" secondAttribute="centerX" id="RUG-Ms-OiQ"/>
-                            <constraint firstItem="qJZ-3g-UmI" firstAttribute="top" secondItem="eXN-zi-LYZ" secondAttribute="top" constant="50" id="Xxc-9U-5mA"/>
+                            <constraint firstItem="qJZ-3g-UmI" firstAttribute="trailing" secondItem="eXN-zi-LYZ" secondAttribute="trailing" id="Tvg-nO-xBw"/>
                             <constraint firstItem="eXN-zi-LYZ" firstAttribute="trailing" secondItem="Jun-JS-1h0" secondAttribute="trailing" constant="20" id="axS-0g-dNR"/>
+                            <constraint firstItem="qJZ-3g-UmI" firstAttribute="top" secondItem="bFQ-EI-Nca" secondAttribute="bottom" constant="20" id="mbV-dT-od1"/>
                             <constraint firstItem="zI4-wn-V0j" firstAttribute="bottom" secondItem="eXN-zi-LYZ" secondAttribute="bottom" constant="-30" id="oIQ-HV-CsN"/>
                             <constraint firstItem="eXN-zi-LYZ" firstAttribute="bottom" secondItem="Jun-JS-1h0" secondAttribute="bottom" constant="10" id="zPN-7V-Fw8"/>
                         </constraints>
@@ -762,6 +770,7 @@
                         <outlet property="player2Health" destination="9kI-SE-1OI" id="mWe-CP-czl"/>
                         <outlet property="player2HealthBar" destination="1dz-UO-zhG" id="fcv-t6-FIf"/>
                         <outlet property="player2Name" destination="cjK-dT-Hju" id="M2p-db-Hxb"/>
+                        <outlet property="roundLabel" destination="bFQ-EI-Nca" id="7Yp-sF-F5P"/>
                         <outlet property="versionLabel" destination="Jun-JS-1h0" id="aPf-Kz-3js"/>
                         <outletCollection property="player1Actions" destination="ZNm-5K-Daz" collectionClass="NSMutableArray" id="msa-kP-Sd1"/>
                         <outletCollection property="player1Actions" destination="y5v-Da-Dxc" collectionClass="NSMutableArray" id="cMe-Q7-p4P"/>

@@ -10,6 +10,8 @@ import UIKit
 
 /// Displays current battle progress and player action buttons.
 class BattleViewController: UIViewController {
+    @IBOutlet var roundLabel: UILabel!
+
     @IBOutlet var player1Name: UILabel!
     @IBOutlet var player1Health: UILabel!
     @IBOutlet var player1HealthBar: UISlider!
@@ -87,6 +89,8 @@ class BattleViewController: UIViewController {
 
     /// Updates the UI with the current state of the model.
     func updateUI(battle: Battle) {
+        roundLabel.text = "Round \(battle.roundNumber)"
+
         let player1 = battle.players[0]
         let player2 = battle.players[1]
 
