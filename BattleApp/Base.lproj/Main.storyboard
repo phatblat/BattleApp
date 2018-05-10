@@ -727,15 +727,24 @@
                                     <action selector="abortBattle:" destination="3Gb-a6-9ir" eventType="touchUpInside" id="UEN-CS-ci5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Version 0.0.0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jun-JS-1h0">
+                                <rect key="frame" x="649" y="993.5" width="99" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.34636032819747919" green="0.067807032023054409" blue="0.03885970562529991" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="Jun-JS-1h0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eXN-zi-LYZ" secondAttribute="leading" constant="50" id="2Zd-PW-2Xu"/>
                             <constraint firstItem="zI4-wn-V0j" firstAttribute="top" secondItem="qJZ-3g-UmI" secondAttribute="bottom" constant="50" id="6lz-Ft-DLZ"/>
                             <constraint firstItem="qJZ-3g-UmI" firstAttribute="leading" secondItem="eXN-zi-LYZ" secondAttribute="leading" id="8x1-7o-Qmm"/>
                             <constraint firstItem="qJZ-3g-UmI" firstAttribute="width" secondItem="eXN-zi-LYZ" secondAttribute="width" id="FvP-kJ-ZLG"/>
                             <constraint firstItem="zI4-wn-V0j" firstAttribute="centerX" secondItem="IxG-CE-od1" secondAttribute="centerX" id="RUG-Ms-OiQ"/>
                             <constraint firstItem="qJZ-3g-UmI" firstAttribute="top" secondItem="eXN-zi-LYZ" secondAttribute="top" constant="50" id="Xxc-9U-5mA"/>
+                            <constraint firstItem="eXN-zi-LYZ" firstAttribute="trailing" secondItem="Jun-JS-1h0" secondAttribute="trailing" constant="20" id="axS-0g-dNR"/>
                             <constraint firstItem="zI4-wn-V0j" firstAttribute="bottom" secondItem="eXN-zi-LYZ" secondAttribute="bottom" constant="-30" id="oIQ-HV-CsN"/>
+                            <constraint firstItem="eXN-zi-LYZ" firstAttribute="bottom" secondItem="Jun-JS-1h0" secondAttribute="bottom" constant="10" id="zPN-7V-Fw8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eXN-zi-LYZ"/>
                     </view>
@@ -753,6 +762,7 @@
                         <outlet property="player2Health" destination="9kI-SE-1OI" id="mWe-CP-czl"/>
                         <outlet property="player2HealthBar" destination="1dz-UO-zhG" id="fcv-t6-FIf"/>
                         <outlet property="player2Name" destination="cjK-dT-Hju" id="M2p-db-Hxb"/>
+                        <outlet property="versionLabel" destination="Jun-JS-1h0" id="aPf-Kz-3js"/>
                         <outletCollection property="player1Actions" destination="ZNm-5K-Daz" collectionClass="NSMutableArray" id="msa-kP-Sd1"/>
                         <outletCollection property="player1Actions" destination="y5v-Da-Dxc" collectionClass="NSMutableArray" id="cMe-Q7-p4P"/>
                         <outletCollection property="player1Actions" destination="Qa9-la-fWV" collectionClass="NSMutableArray" id="5qI-mj-qCo"/>

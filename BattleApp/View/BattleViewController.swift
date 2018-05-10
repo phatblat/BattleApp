@@ -26,6 +26,8 @@ class BattleViewController: UIViewController {
     @IBOutlet var player2Action3: UIButton!
     @IBOutlet var player2Actions: [UIButton]!
 
+    @IBOutlet var versionLabel: UILabel!
+
     /// Model for the app.
     var battle: Battle?
 
@@ -33,6 +35,11 @@ class BattleViewController: UIViewController {
         super.viewDidLoad()
         wireUpButtonActions()
         updateUI()
+
+        guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] else {
+            fatalError("Unable to access CFBundleShortVersionString in info.plist")
+        }
+        versionLabel.text = "Version \(version)"
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
