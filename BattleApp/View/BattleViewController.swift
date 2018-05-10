@@ -10,6 +10,8 @@ import UIKit
 
 /// Displays current battle progress and player action buttons.
 class BattleViewController: UIViewController {
+    @IBOutlet var roundLabel: UILabel!
+
     @IBOutlet var player1Name: UILabel!
     @IBOutlet var player1Health: UILabel!
     @IBOutlet var player1HealthBar: UISlider!
@@ -26,6 +28,8 @@ class BattleViewController: UIViewController {
     @IBOutlet var player2Action3: UIButton!
     @IBOutlet var player2Actions: [UIButton]!
 
+    @IBOutlet var versionLabel: UILabel!
+
     /// Model for the app.
     var battle: Battle?
 
@@ -33,6 +37,11 @@ class BattleViewController: UIViewController {
         super.viewDidLoad()
         wireUpButtonActions()
         updateUI()
+
+        guard let version = Bundle.main.infoDictionary?["CFBundleShortVersionString"] else {
+            fatalError("Unable to access CFBundleShortVersionString in info.plist")
+        }
+        versionLabel.text = "Version \(version)"
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -46,10 +55,10 @@ class BattleViewController: UIViewController {
             message: "Are you sure you want to exit this battle? You will lose all progress made in this battle.",
             preferredStyle: .alert
         )
-        let actionNo = UIAlertAction(title: "No", style: .cancel) { (_: UIAlertAction) in
+        let actionNo = UIAlertAction(title: "No", style: .cancel) { _ in
             alert.dismiss(animated: true)
         }
-        let actionYes = UIAlertAction(title: "Yes", style: .destructive) { [weak self] (_: UIAlertAction) in
+        let actionYes = UIAlertAction(title: "Yes", style: .destructive) { [weak self] _ in
             alert.dismiss(animated: true)
             self?.performSegue(withIdentifier: "unwindToSetup", sender: self)
         }
@@ -64,7 +73,7 @@ class BattleViewController: UIViewController {
             message: "Congratulations! \(winner.name) has won this battle.",
             preferredStyle: .alert
         )
-        let action = UIAlertAction(title: "🎉 Hooray! 👑", style: .cancel) { (_: UIAlertAction) in
+        let action = UIAlertAction(title: "🎉 Hooray! 👑", style: .cancel) { _ in
             alert.dismiss(animated:  true)
         }
         alert.addAction(action)
@@ -80,6 +89,8 @@ class BattleViewController: UIViewController {
 
     /// Updates the UI with the current state of the model.
     func updateUI(battle: Battle) {
+        roundLabel.text = "Round \(battle.roundNumber)"
+
         let player1 = battle.players[0]
         let player2 = battle.players[1]
 
